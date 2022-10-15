@@ -13,7 +13,6 @@ export const Formulario = (props) => {
 
 
     const aoSalvar = (evento) => {
-        console.log('Form foi submetido =>', nome, cargo, imagem, time);
         evento.preventDefault();
         props.aoCadastrarNovoColaborador({
             nome,
@@ -21,6 +20,10 @@ export const Formulario = (props) => {
             imagem,
             time
         });
+        setNome('');
+        setCargo('');
+        setImagem('');
+        setTime('');
     }
     
     return (
