@@ -4,7 +4,7 @@ import Botao from "../Botao";
 import "./Formulario.css";
 import { useState } from "react";
 
-export const Formulario = () => {
+export const Formulario = (props) => {
     
     const times = [
         "Front-End",
@@ -25,6 +25,12 @@ export const Formulario = () => {
     const aoSalvar = (evento) => {
         console.log('Form foi submetido =>', nome, cargo, imagem, time);
         evento.preventDefault();
+        props.aoCadastrarNovoColaborador({
+            nome,
+            cargo,
+            imagem,
+            time
+        });
     }
     
     return (
