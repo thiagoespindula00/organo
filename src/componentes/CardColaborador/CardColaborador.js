@@ -1,9 +1,9 @@
 import './CardColaborador.css';
 
-export const CardColaborador = ({nome, imagem, cargo}) => {
+export const CardColaborador = ({nome, imagem, cargo, corDeFundo}) => {
     return (
         <div className='card_colaborador'>
-            <div className='cabecalho'>
+            <div className='cabecalho' style={{backgroundColor: corDeFundo}}>
                 <img src={imagem} alt={nome}/>
             </div>
             <div className='rodape'>

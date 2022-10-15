@@ -47,6 +47,7 @@ function App() {
   const [colaboradores, setColaboradores] = useState([]);
 
   const adicionaNovoColaborador = (colaborador) => {
+    //debugger -> debugar com o inspecionar elementos aberto
     setColaboradores([...colaboradores, colaborador]);
   }
 
