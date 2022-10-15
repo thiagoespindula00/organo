@@ -49,7 +49,7 @@ export const Formulario = (props) => {
                 <ListaSuspensa 
                     obrigatorio={true}
                     label="Times"
-                    itens={props.times}
+                    itens={props.times.map(time => time.nome)}
                     aoAlterar={setTime}
                     valor={time}
                 />

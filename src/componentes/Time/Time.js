@@ -1,3 +1,4 @@
+import { CardColaborador } from '../CardColaborador/CardColaborador';
 import './Time.css';
 
 export const Time = (props) => {
@@ -13,6 +14,14 @@ export const Time = (props) => {
     return(
         <section className="time" style={cssStyleSection}>
             <h3 style={cssStyleH3}>{props.nome}</h3>
+            <div className='colaboradores'>
+                {props.colaboradores.map(colaborador => <CardColaborador
+                    key={colaborador.nome}
+                    nome={colaborador.nome}
+                    cargo={colaborador.cargo}
+                    imagem={colaborador.imagem}
+                />)}
+            </div>
         </section>
     );
 }
