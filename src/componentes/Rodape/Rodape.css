@@ -1,0 +1,20 @@
+.rodape {
+    display: flex;
+    justify-content: space-around;
+    background-color: #6278F7;
+    padding: 80px;
+}
+
+.rodape .redes_sociais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape .redes_sociais a {
+    margin: 20px;
+}
+
+.rodape .autor_organo p {
+    color: #FFF;
+}
