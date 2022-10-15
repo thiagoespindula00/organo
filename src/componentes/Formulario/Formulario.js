@@ -5,21 +5,11 @@ import "./Formulario.css";
 import { useState } from "react";
 
 export const Formulario = (props) => {
-    
-    const times = [
-        "Front-End",
-        "Data Science",
-        "Devops",
-        "Programação",
-        "UX e Design",
-        "Mobile",
-        "Inovação e Gestão"
-    ];
 
     const [nome  , setNome  ] = useState('');
     const [cargo , setCargo ] = useState('');
     const [imagem, setImagem] = useState('');
-    const [time  , setTime  ] = useState('Programação');
+    const [time  , setTime  ] = useState('');
 
 
     const aoSalvar = (evento) => {
@@ -59,7 +49,7 @@ export const Formulario = (props) => {
                 <ListaSuspensa 
                     obrigatorio={true}
                     label="Times"
-                    itens={times}
+                    itens={props.times}
                     aoAlterar={setTime}
                     valor={time}
                 />
